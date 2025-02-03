@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Receptit
 
-## Getting Started
+## Description
 
-First, run the development server:
+This web application utilizes AI to extract, structure, and translate recipes from images. Users can upload a photo of a recipe, and the app automatically processes the text using OCR (Tesseract.js) and AI (OpenAI) to deliver a well-structured recipe with clear ingredients and instructions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Image to Text Extraction – Uses Tesseract.js to extract text from recipe images.
+* AI-Powered Recipe Structuring – Removes unnecessary text, identifies ingredients, and organizes instructions.
+* Automatic Translation – Converts recipes into Swedish for consistency and clarity.
+* Seamless User Experience – A simple and intuitive interface for fast and efficient recipe conversion.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Upload an image containing a recipe.
+2. The app extracts the text using OCR (Tesseract.js).
+3. AI processes the text, filtering out irrelevant information.
+4. The structured recipe, including ingredients and step-by-step instructions, is returned in Swedish.
