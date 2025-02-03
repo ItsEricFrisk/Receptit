@@ -2,12 +2,20 @@
 
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
+import { useEffect, useState } from "react"
 
 
 export default function ErrorPage() {
 
     const searchParams = useSearchParams()
-    const errorMessage = searchParams?.get("message") || "An unkown error occurred."
+    const [errorMessage, setErrorMessage] = useState("An unkown error occurred.")
+
+    useEffect(() => {
+        const message = searchParams?.get("message")
+        if (message) {
+            setErrorMessage(message)
+        }
+    },[searchParams])
 
     return (
         <section className="w-screen h-screen flex flex-col items-center justify-center">
